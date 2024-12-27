@@ -37,6 +37,7 @@ download:
     tar -C build -xvf {{ GEOS_FILE }}
     tar -C build -xvf {{ PROJ_FILE }}
     tar -C build -xvf {{ SQLITE_FILE }}
+alias d := download
 
 build:
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && ./configure --prefix={{ GDAL_PREFIX }}
