@@ -38,7 +38,7 @@ build:
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && ./configure --prefix={{ GDAL_PREFIX }}
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && make -j4
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && make install
-    expbuild \
+    export \
         SQLITE3_LIBS="-L{{ GDAL_PREFIX }}/lib -lsqlite3" \
         SQLITE3_CFLAGS="-I${{ CWD }}/local/gdal-{{ GDAL_VERSION }}/include" \
         PATH="{{ CWD }}/local/gdal-{{ GDAL_VERSION }}/bin:{{ PATH }}"
