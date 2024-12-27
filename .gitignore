@@ -1,0 +1,6 @@
+build/
+gdal-3.8.4.tar.gz
+geos-3.12.1.tar.bz2
+local/
+proj-9.4.0.tar.gz
+sqlite-autoconf-3450300.tar.gz
