@@ -54,12 +54,10 @@ build:
     cd build/geos-{{ GEOS_VERSION }}/build && cmake -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX={{ GDAL_PREFIX }} .. && make -j4 && make install
     cd build/gdal-{{ GDAL_VERSION }} && mkdir build || echo "Failed to create 'build' directory."
-
-    cd build/gdal-{{ GDAL_VERSION }}/build && mkdir build || echo "Failed to create 'build' directory."
     cd build/gdal-{{ GDAL_VERSION }}/build && cmake -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX={{ GDAL_PREFIX }} -DSQLite3_INCLUDE_DIR={{ GDAL_PREFIX }}/include \
         -DSQLite3_LIBRARY={{ GDAL_PREFIX }}/lib/libsqlite3.dylib -DACCEPT_MISSING_SQLITE3_MUTEX_ALLOC=ON \
         -DACCEPT_MISSING_SQLITE3_RTREE=ON -DGDAL_USE_LIBKML=OFF -DGDAL_IGNORE_FAILED_CONDITIONS=ON \
-        -DGDAL_USE_POPPLER=OFF .
+        -DGDAL_USE_POPPLER=OFF ..
     cd build/gdal-{{ GDAL_VERSION }}/build && cmake --build . --target install
 alias b := build
