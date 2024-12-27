@@ -20,6 +20,8 @@ default:
 [group('gdal')]
 gdal-clean:
     rm -rvf build/
+    rm -rvf local/
+    rm -rvf *tar*
 alias clean := gdal-clean
 alias c := gdal-clean
 
