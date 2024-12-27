@@ -20,6 +20,7 @@ default:
 [group('gdal')]
 gdal-clean:
     rm -f *tar*
+alias clean := gdal-clean
 
 [group('gdal')]
 gdal:
