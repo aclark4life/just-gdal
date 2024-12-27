@@ -19,8 +19,9 @@ default:
 
 [group('gdal')]
 gdal-clean:
-    rm -f *tar*
+    rm -rvf build/
 alias clean := gdal-clean
+alias c := gdal-clean
 
 [group('gdal')]
 gdal:
