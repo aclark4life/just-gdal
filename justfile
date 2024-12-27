@@ -24,7 +24,7 @@ alias clean := gdal-clean
 alias c := gdal-clean
 
 [group('gdal')]
-gdal:
+build:
     -mkdir local
     -mkdir build
     wget https://github.com/OSGeo/gdal/releases/download/v{{ GDAL_VERSION }}/{{ GDAL_FILE }}
@@ -55,3 +55,4 @@ gdal:
         -DACCEPT_MISSING_SQLITE3_RTREE=ON -DGDAL_USE_LIBKML=OFF -DGDAL_IGNORE_FAILED_CONDITIONS=ON \
         -DGDAL_USE_POPPLER=OFF ..
     cd build/gdal-{{ GDAL_VERSION }}/build && cmake --build . --target install
+alias b := build
