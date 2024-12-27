@@ -26,7 +26,7 @@ alias clean := gdal-clean
 alias c := gdal-clean
 
 [group('gdal')]
-build:
+download:
     -mkdir local
     -mkdir build
     wget https://github.com/OSGeo/gdal/releases/download/v{{ GDAL_VERSION }}/{{ GDAL_FILE }}
@@ -37,6 +37,8 @@ build:
     tar -C build -xvf {{ GEOS_FILE }}
     tar -C build -xvf {{ PROJ_FILE }}
     tar -C build -xvf {{ SQLITE_FILE }}
+
+build:
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && ./configure --prefix={{ GDAL_PREFIX }}
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && make -j4
     cd build/sqlite-autoconf-{{ SQLITE_VERSION }} && make install
