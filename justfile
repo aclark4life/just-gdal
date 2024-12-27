@@ -1,14 +1,14 @@
 CWD := `pwd`
 GDAL_FILE := "gdal-" + GDAL_VERSION + ".tar.gz"
 GDAL_PREFIX := CWD + "/local/gdal-" + GDAL_VERSION
-GDAL_VERSION := "3.8.4"
+GDAL_VERSION := "3.8.5"
 GEOS_CONFIG := CWD + "/local/gdal-" + GDAL_VERSION + "/bin/geos-config"
 GEOS_FILE := "geos-" + GEOS_VERSION + ".tar.bz2"
-GEOS_VERSION := "3.12.1"
+GEOS_VERSION := "3.13.0"
 PROJ_FILE := "proj-" + PROJ_VERSION + ".tar.gz"
-PROJ_VERSION := "9.4.0"
+PROJ_VERSION := "9.5.1"
 SQLITE_FILE := "sqlite-autoconf-" + SQLITE_VERSION + ".tar.gz"
-SQLITE_VERSION := "3450300"
+SQLITE_VERSION := "3470200"
 SQLITE_YEAR := "2024"
 PATH := env_var('PATH')
 
