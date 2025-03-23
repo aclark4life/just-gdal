@@ -1,5 +1,8 @@
 # just-gdal
 
+> [!NOTE]  
+> Works with Python 3.12
+
 Build gdal on macOS. 
 
 ## Install
