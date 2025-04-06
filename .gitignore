@@ -1,6 +1,10 @@
 build/
 local/
 gdal-3.8.5.tar.gz
-geos-3.13.0.tar.bz2
+geos-3.13.1.tar.bz2
 proj-9.5.1.tar.gz
 sqlite-autoconf-3470200.tar.gz
+.python-version
+bin/
+lib/
+pyvenv.cfg
